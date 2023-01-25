@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { Button } from 'components';
+import { WhiteButton } from 'components';
 import React from 'react';
 import { SearchBox } from './SearchBox';
 import { Slider } from './Slider';
@@ -39,7 +39,7 @@ export function Hero() {
                         approaching of a revoluation in clothes...
                     </Typography>
                     <SearchBox />
-                    <Button>collections</Button>
+                    <WhiteButton>collections</WhiteButton>
                 </Box>
                 <p>hi</p>
                 <p>bye</p>

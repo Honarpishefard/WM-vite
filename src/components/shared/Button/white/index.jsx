@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button as MuiButton } from '@mui/material';
 
-export function Button(props) {
+export function WhiteButton(props) {
     return (
         <MuiButton
             sx={{
@@ -14,7 +14,7 @@ export function Button(props) {
                 color: 'text.black',
                 fontSize: '1rem',
                 fontWeight: '700',
-                paddingX: '1.5rem',
+                paddingX: '2rem',
                 paddingY: '.5rem',
                 '&:hover': {
                     backgroundColor: 'main.lightGray',
