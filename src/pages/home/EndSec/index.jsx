@@ -93,9 +93,9 @@ export function Sales() {
           zIndex: '-1'
         }}
       />
-      <Box sx={{ textAlign: 'end' }}>
-        <Typography sx={{ color: 'text.white', fontWeight: '700', fontSize: '18rem', lineHeight: '18rem' }}>50%</Typography>
-        <Typography sx={{ color: 'text.white', fontWeight: '700', fontSize: '18rem', lineHeight: '18rem' }}>Special</Typography>
+      <Box sx={{ textAlign: 'end', paddingX: '2rem' }}>
+        <Typography sx={{ color: 'text.white', fontWeight: '700', fontSize: '15rem', lineHeight: '18rem' }}>50%</Typography>
+        <Typography sx={{ color: 'text.white', fontWeight: '700', fontSize: '15rem', lineHeight: '18rem' }}>Special</Typography>
         <Typography sx={{ color: 'text.white', fontWeight: '500', fontSize: '3.6rem', paddingTop: '2rem' }}>Offers You Love</Typography>
       </Box>
     </Box>
