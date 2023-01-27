@@ -1,18 +1,16 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { Header, Footer } from 'layout';
 import { Box, Typography, Grid, Container } from '@mui/material';
-import homePageCards from '../../db/data';
+import { homePageCategories, homePageProducts } from '../../db/data';
 import { Hero } from './heroSec';
 import { CategoryCard } from './CategoryCards';
 import { Products } from './Products';
-import tshirt from './../../assets/images/homeProduct1.png';
-import tie from './../../assets/images/homeProduct2.png';
-import furCoat from './../../assets/images/homeProduct3.png';
 import { BlackButton } from 'components';
 
 
 export function Home() {
-  const cardGenerator = homePageCards().map((item) => {
+  const cardGenerator = homePageCategories().map((item) => {
     return (
       <CategoryCard backgroundImg={item.image}>
         <Box sx={{ padding: '2rem' }}>
@@ -36,6 +34,16 @@ export function Home() {
       </CategoryCard>
     );
   });
+
+  const productGen = homePageProducts().map((item) => {
+    return (
+      <Products title={item.title} pic={item.image} oldPrice={item.oldPrice} newPrice={item.newPrice}>
+        {item.colors.map((i) => {
+          return <Box sx={{ borderRadius: '50%', backgroundColor: i, width: '2rem', height: '2rem' }} />
+          })}
+      </Products>
+    )
+  })
 
   return (
     <>
@@ -68,20 +76,7 @@ export function Home() {
           <BlackButton bg="#329" margin='0 100%'>MORE</BlackButton>
         </Box>
         <Grid Container sx={{ display: 'flex', gap: '3rem', justifyContent: 'center', paddingX: '5rem', marginY: '5rem' }}>
-            <Products title='T-shirt' pic={tshirt} oldPrice={'$50'} newPrice={'$30'}>
-                <Box sx={{ borderRadius: '50%', backgroundColor: '#2A282A', width: '2rem', height: '2rem' }} />
-                <Box sx={{ borderRadius: '50%', backgroundColor: '#E5E5E5', width: '2rem', height: '2rem' }} />
-            </Products>
-            <Products title='Tie' pic={tie} oldPrice={'$50'} newPrice={'$45'}>
-            <Box sx={{ borderRadius: '50%', backgroundColor: '#348B96', width: '2rem', height: '2rem' }} />
-                <Box sx={{ borderRadius: '50%', backgroundColor: '#963434', width: '2rem', height: '2rem' }} />
-                <Box sx={{ borderRadius: '50%', backgroundColor: '#423496', width: '2rem', height: '2rem' }} />  
-            </Products>
-            <Products title='Fur Coat' pic={furCoat} oldPrice={'$200'} newPrice={'$120'}>
-                <Box sx={{ borderRadius: '50%', backgroundColor: '#D9C1AA', width: '2rem', height: '2rem' }} />
-                <Box sx={{ borderRadius: '50%', backgroundColor: '#F1EEA5', width: '2rem', height: '2rem' }} />
-                <Box sx={{ borderRadius: '50%', backgroundColor: '#F8B2FA', width: '2rem', height: '2rem' }} />    
-            </Products>
+          {productGen}
         </Grid>
       </Container>
       <Footer />

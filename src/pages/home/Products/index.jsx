@@ -15,7 +15,7 @@ export function Products({ pic, title, children, oldPrice, newPrice }) {
       </Box>
       <Box sx={{ display: 'flex', gap: '2rem', paddingY: '2rem' }}>
         <Typography sx={{ color: 'text.white', fontWeight: '400', fontSize: '2rem' }}>
-          {oldPrice}
+          {newPrice}
         </Typography>
         <Typography
           sx={{
@@ -24,7 +24,7 @@ export function Products({ pic, title, children, oldPrice, newPrice }) {
             fontSize: '2rem',
             textDecorationLine: 'line-through'
           }}>
-          {newPrice}
+          {oldPrice}
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', gap: '3rem', paddingTop: '2rem' }}>
