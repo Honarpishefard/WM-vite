@@ -2,11 +2,12 @@
 import React from 'react';
 import { Header, Footer } from 'layout';
 import { Box, Typography, Grid, Container } from '@mui/material';
-import { homePageCategories, homePageProducts } from '../../db/data';
+import { homePageCategories, homePageProducts } from 'db/data';
 import { Hero } from './heroSec';
 import { CategoryCard } from './CategoryCards';
 import { Products } from './Products';
 import { BlackButton } from 'components';
+import { StyleYourLife } from './StyleYourLifeSec';
 
 
 export function Home() {
@@ -79,6 +80,7 @@ export function Home() {
           {productGen}
         </Grid>
       </Container>
+      <StyleYourLife />
       <Footer />
     </>
   );
