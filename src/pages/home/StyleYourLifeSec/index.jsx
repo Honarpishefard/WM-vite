@@ -2,21 +2,23 @@ import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import style1 from 'assets/images/style1.jpg';
 import style2 from 'assets/images/style2.jpg';
+import { WhiteButton } from 'components';
 
 export function StyleYourLife() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-      <Typography
-        sx={{
-          color: 'text.white',
-          fontWeight: '800',
-          fontSize: '18rem',
-          position: 'absolute',
-          paddingX: '8%',
-          marginTop: '5%'
-        }}>
-        Style <br /> your life
-      </Typography>
+      <Box sx={{ position: 'absolute', width: '100%', paddingX: '8%', }}>
+        <Typography
+          sx={{
+            color: 'text.white',
+            fontWeight: '800',
+            fontSize: '18rem',
+            marginTop: '5%'
+          }}>
+          Style <br /> your life
+        </Typography>
+        <WhiteButton>Open Now</WhiteButton>
+      </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '22%' }}>
         <Box>
           <img src={style1} alt="" />
@@ -37,7 +39,7 @@ export function StyleYourLife() {
               fontWeight: '500',
               fontSize: '1.8rem',
               borderRadius: '0 2rem 0 0',
-              padding: '2.5rem 2rem',
+              padding: '2.5rem 2rem'
             }}>
             Winter Collections
           </Button>
