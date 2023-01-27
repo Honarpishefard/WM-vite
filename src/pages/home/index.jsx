@@ -8,6 +8,7 @@ import { CategoryCard } from './CategoryCards';
 import { Products } from './Products';
 import { BlackButton } from 'components';
 import { StyleYourLife } from './StyleYourLifeSec';
+import { CasualStyle, MansBAlance, Sales } from './EndSec';
 
 
 export function Home() {
@@ -56,7 +57,7 @@ export function Home() {
           sx={{ display: 'flex', gap: '3rem', flexWrap: 'nowrap', paddingBottom: '6rem' }}>
           {cardGenerator}
         </Grid>
-        <Box sx={{ display: 'flex', gap: '16rem' }}>
+        <Box sx={{ display: 'flex', gap: '16rem', paddingY: '4rem' }}>
           <Typography sx={{ fontWeight: '700', fontSize: '6.4rem', color: 'text.white', lineHeight: '7rem', paddingLeft: '1rem' }}>
             Jeans & <Box sx={{ fontWeight: '700', fontSize: '6.4rem', color: 'main.lightGray' }}>Professional</Box>
           </Typography>
@@ -81,6 +82,9 @@ export function Home() {
         </Grid>
       </Container>
       <StyleYourLife />
+      <MansBAlance />
+      <CasualStyle />
+      <Sales />
       <Footer />
     </>
   );

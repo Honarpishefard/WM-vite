@@ -6,7 +6,7 @@ import { WhiteButton } from 'components';
 
 export function StyleYourLife() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingY: '10rem' }}>
       <Box sx={{ position: 'absolute', width: '100%', paddingX: '8%', }}>
         <Typography
           sx={{
