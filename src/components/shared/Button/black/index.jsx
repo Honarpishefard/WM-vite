@@ -14,7 +14,7 @@ export function BlackButton(props) {
                 color: 'text.white',
                 fontSize: '1rem',
                 fontWeight: '700',
-                paddingX: '2rem',
+                paddingX: '2.5rem',
                 paddingY: '.5rem',
                 '&:hover': {
                     backgroundColor: 'main.lightGray',
