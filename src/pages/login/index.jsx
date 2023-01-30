@@ -31,10 +31,10 @@ export function Login() {
           minWidth: '30rem',
           width: '100vw'
         }}>
-        <TextField label="Useranme" />
+        <TextField className="input" label="Useranme" />
         <ShowHidePassword label="Password"/>
       </Box>
       <WhiteButton>Login</WhiteButton>
     </Box>
   );
-}
+};

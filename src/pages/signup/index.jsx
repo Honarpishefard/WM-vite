@@ -34,9 +34,9 @@ export function SignUp() {
           minWidth: '30rem',
           width: '100vw'
         }}>
-        <TextField label="Useranme" />
-        <TextField label="E-mail" />
-        <TextField label="Password" />
+        <TextField className="input" label="Useranme" />
+        <TextField className="input" label="E-mail" />
+        <TextField className="input" label="Password" />
         <ShowHidePassword label="repeat password" />
       </Box>
       <WhiteButton>Sign up</WhiteButton>

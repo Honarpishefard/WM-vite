@@ -1,5 +1,8 @@
-input {
+.input {
     background-color: #161616 !important;
+}
+
+input {
     color: white !important;
 }
 

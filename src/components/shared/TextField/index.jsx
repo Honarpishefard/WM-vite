@@ -2,9 +2,10 @@ import React from 'react';
 import { TextField as MuiTextField } from '@mui/material';
 import './index.css';
 
-export function TextField({ label }) {
+export function TextField({ label, className }) {
   return (
     <MuiTextField
+      className={className}
       id="filled-basic"
       label={label}
       variant="filled"
