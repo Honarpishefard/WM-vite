@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-export function DropDownMenu(props) {
+export function DropDownMenu({title, sections}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     function handleClick(event) {
@@ -16,6 +16,10 @@ export function DropDownMenu(props) {
     function handleClose() {
         setAnchorEl(null);
     }
+
+    const sectionGen = sections.map((item) => {
+        return <MenuItem onClick={handleClose}>{item}</MenuItem>
+      })
 
     return (
         <div>
@@ -32,18 +36,14 @@ export function DropDownMenu(props) {
                 aria-owns={anchorEl ? 'DropDownMenu' : undefined}
                 aria-haspopup="true"
                 onClick={handleClick}
-                onMouseOver={handleClick}
-                {...props}
-            />
+                onMouseOver={handleClick}>{title}</Button>
             <Menu
                 id="DropDownMenu"
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
                 MenuListProps={{ onMouseLeave: handleClose }}>
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                {sectionGen}
             </Menu>
         </div>
     );

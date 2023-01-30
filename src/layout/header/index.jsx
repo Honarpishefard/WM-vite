@@ -42,7 +42,7 @@ export function Header() {
                             alignItems: 'center',
                             cursor: 'pointer',
                         }}>
-                        <DropDownMenu>Man’s</DropDownMenu>
+                        <DropDownMenu title='Man’s' sections={['Jackets', 'Hoodies & Sweatshirts', 'Shoes', 'T-shirts', 'Jeans', 'Accessories']} />
                         <img src={Arrow} alt="" />
                     </Box>
                     <Box
@@ -51,7 +51,7 @@ export function Header() {
                             alignItems: 'center',
                             cursor: 'pointer',
                         }}>
-                        <DropDownMenu>Woman’s</DropDownMenu>
+                        <DropDownMenu title='Woman’s' sections={['Coats', 'Dresses', 'Shoes', 'Bags', 'Accessories']} />
                         <img src={Arrow} alt="" />
                     </Box>
                     <Typography sx={headerItems}>Kid’s</Typography>
