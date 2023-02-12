@@ -1,4 +1,4 @@
-html{
+html {
     font-size: 62.5%;
 }
 
@@ -8,4 +8,8 @@ body {
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
     background-color: black;
+}
+
+a:-webkit-any-link:active {
+    color: #b18ed2;
 }

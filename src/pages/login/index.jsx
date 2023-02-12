@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { ShowHidePassword, TextField, WhiteButton } from 'components';
 import Logo from '../../assets/images/W&M.svg';
+import { Link } from 'react-router-dom';
 
 export function Login() {
   const logoStyle = {
@@ -35,6 +36,7 @@ export function Login() {
         <ShowHidePassword label="Password"/>
       </Box>
       <WhiteButton>Login</WhiteButton>
+      <Typography sx={{ color: 'text.white', fontSize: '1.6rem', fontWeight: '400', paddingY: '2rem' }}>don't have an account? <Link to='/signup'>sign up</Link></Typography>
     </Box>
   );
 };

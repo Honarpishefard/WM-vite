@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import Logo from '../../assets/images/W&M.svg';
 import Arrow from '../../assets/images/Arrow.svg';
 import { DropDownMenu } from './DropDownMenu';
+import { useNavigate } from 'react-router-dom';
 
 export function Header() {
     const headerItems = {
@@ -15,6 +16,8 @@ export function Header() {
             color: 'main.superLightGray',
         },
     };
+
+    const navigate = useNavigate();
 
     return (
         <Box>
@@ -42,7 +45,7 @@ export function Header() {
                             alignItems: 'center',
                             cursor: 'pointer',
                         }}>
-                        <DropDownMenu title='Man’s' sections={['Jackets', 'Hoodies & Sweatshirts', 'Shoes', 'T-shirts', 'Jeans', 'Accessories']} />
+                        <DropDownMenu title='Man’s' sections={['Jackets', 'Shoes', 'T-shirts', 'Jeans']} />
                         <img src={Arrow} alt="" />
                     </Box>
                     <Box
@@ -51,7 +54,7 @@ export function Header() {
                             alignItems: 'center',
                             cursor: 'pointer',
                         }}>
-                        <DropDownMenu title='Woman’s' sections={['Coats', 'Dresses', 'Shoes', 'Bags', 'Accessories']} />
+                        <DropDownMenu title='Woman’s' sections={['Coats', 'Dresses', 'Bags']} />
                         <img src={Arrow} alt="" />
                     </Box>
                     <Typography sx={headerItems}>Kid’s</Typography>
@@ -61,7 +64,7 @@ export function Header() {
                 </Box>
                 <Box sx={{ display: 'flex', gap: '5rem' }}>
                     <Typography sx={headerItems}>Cart</Typography>
-                    <Typography sx={headerItems}>Log in/Sign up</Typography>
+                    <Typography sx={headerItems} onClick={() => navigate('/login')}>Log in/Sign up</Typography>
                 </Box>
             </Box>
         </Box>
