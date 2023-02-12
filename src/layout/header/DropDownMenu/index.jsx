@@ -3,6 +3,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { useNavigate } from 'react-router-dom';
 
 export function DropDownMenu({title, sections}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -11,14 +12,16 @@ export function DropDownMenu({title, sections}) {
         if (anchorEl !== event.currentTarget) {
             setAnchorEl(event.currentTarget);
         }
-    }
+    };
 
     function handleClose() {
         setAnchorEl(null);
-    }
+    };
+
+    const navigate = useNavigate();
 
     const sectionGen = sections.map((item) => {
-        return <MenuItem onClick={handleClose}>{item}</MenuItem>
+        return <MenuItem onClick={() => navigate('/men/' + item)}>{item}</MenuItem>
       })
 
     return (

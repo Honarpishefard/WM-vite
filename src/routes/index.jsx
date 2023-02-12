@@ -17,10 +17,10 @@ export const routes = {
     element: <Login />
   },
   Mans: {
-    path: '/mans',
+    path: '/men',
     children: [
-      { path: '/mans/jackets', element: <Jackets /> },
-      { path: '/mans/jackets', element: <Home /> }
+      { path: '/men/jackets', element: <Jackets /> },
+      { path: '/men/jackets', element: <Home /> }
     ]
   }
 };
