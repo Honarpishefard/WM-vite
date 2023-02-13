@@ -45,7 +45,7 @@ export function Header() {
                             alignItems: 'center',
                             cursor: 'pointer',
                         }}>
-                        <DropDownMenu title='Man’s' sections={['Jackets', 'Shoes', 'T-shirts', 'Jeans']} />
+                        <DropDownMenu title='Man’s' sections={['Jackets', 'Shoes', 'Tshirts']} />
                         <img src={Arrow} alt="" />
                     </Box>
                     <Box
