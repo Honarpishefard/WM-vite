@@ -20,8 +20,17 @@ import tshirt1 from 'assets/images/mans-tshirts-1.jpg';
 import tshirt2 from 'assets/images/mans-tshirts-2.jpg';
 import tshirt3 from 'assets/images/mans-tshirts-3.jpg';
 import tshirt4 from 'assets/images/mans-tshirts-4.jpg';
-import tshirt5 from 'assets/images/mans-tshirts-2.jpg';
-import tshirt6 from 'assets/images/mans-tshirts-2.jpg';
+import tshirt5 from 'assets/images/mans-tshirts-5.jpg';
+import coat1 from 'assets/images/womans-coats-1.jpg';
+import coat2 from 'assets/images/womans-coats-2.jpg';
+import coat3 from 'assets/images/womans-coats-3.jpg';
+import coat4 from 'assets/images/womans-coats-4.jpg';
+import coat5 from 'assets/images/womans-coats-5.jpg';
+import dress1 from 'assets/images/womans-dresses-1.jpg';
+
+
+
+
 
 
 
@@ -191,38 +200,50 @@ export function mansTshirts() {
       colors: ['#D0C3AC', '#897072'],
       image: tshirt4,
     },
+    {
+      title: 'HENLEY T-SHIRT',
+      oldPrice: '$48',
+      newPrice: '$43',
+      colors: ['#C9C5AC', '#F8F7E8', '#0D0A02'],
+      image: tshirt5,
+    },
   ];
 };
 
 export function womansCoats() {
   return [
     {
-      title: 'T-shirt',
-      oldPrice: '$50',
-      newPrice: '$30',
-      colors: ['#2A282A', '#E5E5E5'],
-      image: tshirt,
+      title: 'BELTED FAUX LEATHER TRENCH',
+      oldPrice: '$150',
+      newPrice: '$146',
+      colors: ['#DDD4C2', '#0A0A0A'],
+      image: coat1,
     },
     {
-      title: 'Tie',
-      oldPrice: '$50',
-      newPrice: '$45',
-      colors: ['#963434', '#423496'],
-      image: tie,
+      title: 'TRF DENIM POCKET JACKET',
+      oldPrice: '$70',
+      newPrice: '$65',
+      image: coat2,
     },
     {
-      title: 'Fur Coat',
-      oldPrice: '$200',
-      newPrice: '$120',
-      colors: ['#D9C1AA', '#F1EEA5', '#F8B2FA'],
-      image: furCoat,
+      title: 'WATER AND WIND PROTECTION RUBBERIZED PARKA',
+      oldPrice: '$90',
+      newPrice: '$84',
+      colors: ['#998678', '#777771', '#dbd4c2'],
+      image: coat3,
     },
     {
-      title: 'T-shirt',
-      oldPrice: '$50',
-      newPrice: '$30',
-      colors: ['#2A282A', '#E5E5E5'],
-      image: tshirt,
+      title: 'COMBINATION PUFFER JACKET',
+      oldPrice: '$65',
+      newPrice: '$60',
+      image: coat4,
+    },
+    {
+      title: 'CROPPED POCKET BOMBER',
+      oldPrice: '$120',
+      newPrice: '$114',
+      colors: ['#3a3830', '#777771'],
+      image: coat5,
     },
   ];
 };
@@ -230,11 +251,11 @@ export function womansCoats() {
 export function womansDresses() {
   return [
     {
-      title: 'T-shirt',
+      title: 'WRAP FRONT SATIN EFFECT DRESS',
       oldPrice: '$50',
-      newPrice: '$30',
-      colors: ['#2A282A', '#E5E5E5'],
-      image: tshirt,
+      newPrice: '$42',
+      colors: ['#60575e', '#f7f6f4', '#273431'],
+      image: dress1,
     },
     {
       title: 'Tie',

@@ -34,6 +34,7 @@ export function ProductGen(list) {
                     display: 'flex',
                     backgroundColor: { backgroundColor },
                     borderRadius: '50%',
+                    border: '.5px solid #888',
                     width: '1rem',
                     height: '1rem'
                   }}
