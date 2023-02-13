@@ -27,6 +27,11 @@ import coat3 from 'assets/images/womans-coats-3.jpg';
 import coat4 from 'assets/images/womans-coats-4.jpg';
 import coat5 from 'assets/images/womans-coats-5.jpg';
 import dress1 from 'assets/images/womans-dresses-1.jpg';
+import dress2 from 'assets/images/womans-dresses-2.jpg';
+import dress3 from 'assets/images/womans-dresses-3.jpg';
+import dress4 from 'assets/images/womans-dresses-4.jpg';
+import dress5 from 'assets/images/womans-dresses-5.jpg';
+
 
 
 
@@ -258,25 +263,29 @@ export function womansDresses() {
       image: dress1,
     },
     {
-      title: 'Tie',
-      oldPrice: '$50',
-      newPrice: '$45',
-      colors: ['#963434', '#423496'],
-      image: tie,
+      title: 'SHORT DRESS WITH BUTTONS',
+      oldPrice: '$70',
+      newPrice: '$65',
+      image: dress2,
     },
     {
-      title: 'Fur Coat',
-      oldPrice: '$200',
-      newPrice: '$120',
-      colors: ['#D9C1AA', '#F1EEA5', '#F8B2FA'],
-      image: furCoat,
+      title: 'PRINTED DRESS WITH DRAPING',
+      oldPrice: '$55',
+      newPrice: '$47',
+      image: dress3,
     },
     {
-      title: 'T-shirt',
-      oldPrice: '$50',
-      newPrice: '$30',
-      colors: ['#2A282A', '#E5E5E5'],
-      image: tshirt,
+      title: 'PRINTED SWISS DOT DRESS',
+      oldPrice: '$60',
+      newPrice: '$51',
+      image: dress4,
+    },
+    {
+      title: 'SHORT STRETCH KNIT DRESS',
+      oldPrice: '$36',
+      newPrice: '$31',
+      colors: ['#0a0a0a', '#d9d4cb', '#aba8a4'],
+      image: dress5,
     },
   ];
 };
@@ -303,13 +312,6 @@ export function womansBags() {
       newPrice: '$120',
       colors: ['#D9C1AA', '#F1EEA5', '#F8B2FA'],
       image: furCoat,
-    },
-    {
-      title: 'T-shirt',
-      oldPrice: '$50',
-      newPrice: '$30',
-      colors: ['#2A282A', '#E5E5E5'],
-      image: tshirt,
     },
   ];
 };
