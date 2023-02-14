@@ -30,7 +30,7 @@ export function ProductGen(list) {
         <Box
           onClick={(e) => {
             setProduct(e.currentTarget.id)
-            navigate(path + '/' + product);
+            navigate(path + '/' + e.currentTarget.id);
           }}
           id={i.id}
           sx={{
