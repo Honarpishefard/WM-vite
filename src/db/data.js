@@ -96,6 +96,7 @@ export function homePageProducts() {
 export function mansJackets() {
   return [
     {
+      id: '11',
       title: 'COTTON JACKET',
       oldPrice: '$129',
       newPrice: '$100',
@@ -103,6 +104,7 @@ export function mansJackets() {
       image: jacket1,
     },
     {
+      id: '22',
       title: 'HOODED JACKET',
       oldPrice: '$80',
       newPrice: '$73',
@@ -314,4 +316,5 @@ export function womansBags() {
       image: furCoat,
     },
   ];
+
 };
