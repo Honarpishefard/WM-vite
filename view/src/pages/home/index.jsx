@@ -10,8 +10,7 @@ import { StyleYourLife } from './StyleYourLifeSec';
 import { CasualStyle, MansBAlance, Sales } from './EndSec';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { fetchProducts } from 'api/services/fetchProducts';
-
+import { mainInstance } from './../../api/constants';
 
 export function Home() {
   const cardGenerator = homePageCategories().map((item) => {
@@ -41,21 +40,32 @@ export function Home() {
 
   const productGen = homePageProducts().map((item) => {
     return (
-      <Products title={item.title} pic={item.image} oldPrice={item.oldPrice} newPrice={item.newPrice}>
+      <Products
+        title={item.title}
+        pic={item.image}
+        oldPrice={item.oldPrice}
+        newPrice={item.newPrice}>
         {item.colors.map((i) => {
-          return <Box sx={{ borderRadius: '50%', backgroundColor: i, width: '2rem', height: '2rem' }} />
-          })}
+          return (
+            <Box sx={{ borderRadius: '50%', backgroundColor: i, width: '2rem', height: '2rem' }} />
+          );
+        })}
       </Products>
-    )
+    );
   });
 
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
+    const fetchProducts = async (data) => {
+      const info = await mainInstance.get('/products', data);
+      setProducts(info.data[0].home);
+    };
     fetchProducts();
-    // console.log(info)
+    products.map((i) => {
+      if (i.category === 'homePageCategories') null
+    });
   }, []);
-
 
   return (
     <>
@@ -68,8 +78,18 @@ export function Home() {
           {cardGenerator}
         </Grid>
         <Box sx={{ display: 'flex', gap: '16rem', paddingY: '4rem' }}>
-          <Typography sx={{ fontWeight: '700', fontSize: '6.4rem', color: 'text.white', lineHeight: '7rem', paddingLeft: '1rem' }}>
-            Jeans & <Box sx={{ fontWeight: '700', fontSize: '6.4rem', color: 'main.lightGray' }}>Professional</Box>
+          <Typography
+            sx={{
+              fontWeight: '700',
+              fontSize: '6.4rem',
+              color: 'text.white',
+              lineHeight: '7rem',
+              paddingLeft: '1rem'
+            }}>
+            Jeans &{' '}
+            <Box sx={{ fontWeight: '700', fontSize: '6.4rem', color: 'main.lightGray' }}>
+              Professional
+            </Box>
           </Typography>
           <Typography sx={{ color: 'main.lightGray', fontWeight: '400', fontSize: '1.6rem' }}>
             Don’t be into trends. Don’t make fashion own you, but you but you desicide what you are
@@ -79,15 +99,24 @@ export function Home() {
             <br />
             Fashion is part of the daily air and it changes all the time, with all the events. You
             can even see the approaching of a revoluation in clothes.
-            <br/>
-            One is never over-dressed or
-            under-dressed with a Little Black Dress.
+            <br />
+            One is never over-dressed or under-dressed with a Little Black Dress.
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'end', paddingTop: '10rem' }}>
-          <BlackButton bg="#329" margin='0 100%'>MORE</BlackButton>
+          <BlackButton bg="#329" margin="0 100%">
+            MORE
+          </BlackButton>
         </Box>
-        <Grid Container sx={{ display: 'flex', gap: '3rem', justifyContent: 'center', paddingX: '5rem', marginY: '5rem' }}>
+        <Grid
+          Container
+          sx={{
+            display: 'flex',
+            gap: '3rem',
+            justifyContent: 'center',
+            paddingX: '5rem',
+            marginY: '5rem'
+          }}>
           {productGen}
         </Grid>
       </Container>
