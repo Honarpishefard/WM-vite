@@ -18,9 +18,7 @@ export function Jackets() {
       <Footer />
     </>
   );
-};
-
-
+}
 
 export function Shoes() {
   return (
@@ -36,7 +34,7 @@ export function Shoes() {
       <Footer />
     </>
   );
-};
+}
 
 export function Tshirts() {
   return (

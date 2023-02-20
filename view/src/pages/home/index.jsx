@@ -8,9 +8,6 @@ import { Products } from './Products';
 import { BlackButton } from 'components';
 import { StyleYourLife } from './StyleYourLifeSec';
 import { CasualStyle, MansBAlance, Sales } from './EndSec';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { mainInstance } from './../../api/constants';
 
 export function Home() {
   const cardGenerator = homePageCategories().map((item) => {
@@ -53,19 +50,6 @@ export function Home() {
       </Products>
     );
   });
-
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async (data) => {
-      const info = await mainInstance.get('/products', data);
-      setProducts(info.data[0].home);
-    };
-    fetchProducts();
-    products.map((i) => {
-      if (i.category === 'homePageCategories') null
-    });
-  }, []);
 
   return (
     <>
